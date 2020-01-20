@@ -26,7 +26,7 @@ public class PhoneNumberRegisterPage extends HttpServlet {
         }
         out.println("<h2>请完整填写以下信息<h2><hr>");
         out.println("<form action='register' method='post'><br>");
-        out.println("手机号: <input type = 'tel' name = 'phoneNUmber'><br>");
+        out.println("手机号: <input type = 'tel' name = 'phoneNumber'><br>");
         out.println("用户名: <input type = 'text' name = 'uname'><br>");
         out.println("密码: <input type = 'password' name = 'pwd'><br>");
         out.println("<input type='submit' value = '注册'>");
