@@ -26,9 +26,9 @@ public class HomeServlet extends HttpServlet {
         out.println("<h1>欢迎来到" + user.getName() + "的主页</h1><br>");
         out.println("<a href='http://localhost:8080/weibo/logout'>注销</a><hr>");
         if ("".equals(user.getEmail())) {
-            out.println("<a href = 'http://local:8080/weibo/bindEmail'>绑定邮箱</a><hr>");
+            out.println("<a href = 'http://localhost:8080/weibo/bindEmail'>绑定邮箱</a><hr>");
         } else if ("".equals(user.getPhotoNumber())) {
-            out.println("<a href = 'http://local:8080/weibo/bindPhoneNumber'>绑定手机</a><hr>");
+            out.println("<a href = 'http://localhost:8080/weibo/bindPhoneNumber'>绑定手机</a><hr>");
         }
     }
 }
