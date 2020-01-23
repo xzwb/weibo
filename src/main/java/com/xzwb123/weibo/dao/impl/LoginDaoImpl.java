@@ -21,7 +21,7 @@ public class LoginDaoImpl implements LoginDao {
             rs = ps.executeQuery();
             while (rs.next()) {
                 user = new User();
-                user.setEmail(rs.getString("uid"));
+                user.setEmail(rs.getString("email"));
                 user.setName(rs.getString("uname"));
                 user.setPhotoNumber(rs.getString("phoneNumber"));
                 user.setUid(rs.getInt("uid"));

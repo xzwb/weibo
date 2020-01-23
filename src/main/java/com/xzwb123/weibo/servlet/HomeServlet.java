@@ -23,6 +23,10 @@ public class HomeServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         HttpSession hs = req.getSession();
         User user = (User)hs.getAttribute("user");
+        if (user == null) {
+            resp.sendRedirect("/weibo/loginPage");
+            return;
+        }
         out.println("<h1>欢迎来到" + user.getName() + "的主页</h1><br>");
         out.println("<a href='http://localhost:8080/weibo/logout'>注销</a><hr>");
         if ("".equals(user.getEmail())) {

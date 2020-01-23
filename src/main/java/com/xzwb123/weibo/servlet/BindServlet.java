@@ -30,6 +30,10 @@ public class BindServlet extends HttpServlet {
             type = "phoneNumber";
         }
         User user = (User) req.getSession().getAttribute("user");
+        if (user == null) {
+            resp.sendRedirect("/weibo/loginPage");
+            return;
+        }
         BindService bs = new BindServiceImpl();
         user = bs.bind(type, information, user.getUid()+"");
         if (user == null) {
