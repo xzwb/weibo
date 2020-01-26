@@ -34,5 +34,6 @@ public class HomeServlet extends HttpServlet {
         } else if ("".equals(user.getPhotoNumber())) {
             out.println("<a href = 'http://localhost:8080/weibo/bindPhoneNumber'>绑定手机</a><hr>");
         }
+        out.println("<hr>当前在线人数: " + hs.getServletContext().getAttribute("onlineCount"));
     }
 }
