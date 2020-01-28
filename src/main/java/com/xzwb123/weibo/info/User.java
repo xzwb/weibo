@@ -1,5 +1,8 @@
 package com.xzwb123.weibo.info;
 
+/**
+ * 用户实例类
+ */
 public class User {
     private int uid;
     private String uname;
