@@ -1,4 +1,4 @@
-package com.xzwb123.weibo.servlet;
+package com.xzwb123.weibo.page;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,8 +15,8 @@ import java.io.PrintWriter;
 public class RegisterPage extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
-        resp.setContentType("text/html;charset=utf-8");
+        // req.setCharacterEncoding("utf-8");
+        // resp.setContentType("text/html;charset=utf-8");
         PrintWriter out = resp.getWriter();
         String judge = (String)req.getAttribute("judge");
         if ("no".equals(judge)) {

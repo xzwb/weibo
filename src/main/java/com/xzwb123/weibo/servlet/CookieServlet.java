@@ -19,8 +19,8 @@ import java.io.IOException;
 public class CookieServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html;charset=utf-8");
-        req.setCharacterEncoding("utf-8");
+        // resp.setContentType("text/html;charset=utf-8");
+        // req.setCharacterEncoding("utf-8");
         Cookie[] cookies = req.getCookies();
         LoginService ls = new LoginServiceImpl();
         User user = null;

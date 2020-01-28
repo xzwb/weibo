@@ -19,8 +19,8 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
-        resp.setContentType("text/html;charset=utf-8");
+        // req.setCharacterEncoding("utf-8");
+        // resp.setContentType("text/html;charset=utf-8");
         String name = req.getParameter("uname");
         String pwd = req.getParameter("pwd");
         LoginService ls = new LoginServiceImpl();

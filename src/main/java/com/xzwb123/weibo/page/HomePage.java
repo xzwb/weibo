@@ -1,4 +1,4 @@
-package com.xzwb123.weibo.servlet;
+package com.xzwb123.weibo.page;
 
 import com.xzwb123.weibo.info.User;
 
@@ -15,11 +15,11 @@ import java.io.PrintWriter;
         name = "HomeServlet",
         urlPatterns = {"/homePage"}
 )
-public class HomeServlet extends HttpServlet {
+public class HomePage extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
-        resp.setContentType("text/html;charset=utf-8");
+        // req.setCharacterEncoding("utf-8");
+        // resp.setContentType("text/html;charset=utf-8");
         PrintWriter out = resp.getWriter();
         HttpSession hs = req.getSession();
         User user = (User)hs.getAttribute("user");
@@ -28,11 +28,11 @@ public class HomeServlet extends HttpServlet {
             return;
         }
         out.println("<h1>欢迎来到" + user.getName() + "的主页</h1><br>");
-        out.println("<a href='http://localhost:8080/weibo/logout'>注销</a><hr>");
+        out.println("<a href='http://localhost:8080/weibo/logout'>注销</a>");
         if ("".equals(user.getEmail())) {
-            out.println("<a href = 'http://localhost:8080/weibo/bindEmail'>绑定邮箱</a><hr>");
+            out.println("<hr><a href = 'http://localhost:8080/weibo/bindEmail'>绑定邮箱</a><hr>");
         } else if ("".equals(user.getPhotoNumber())) {
-            out.println("<a href = 'http://localhost:8080/weibo/bindPhoneNumber'>绑定手机</a><hr>");
+            out.println("<hr><a href = 'http://localhost:8080/weibo/bindPhoneNumber'>绑定手机</a><hr>");
         }
         out.println("<hr>当前在线人数: " + hs.getServletContext().getAttribute("onlineCount"));
     }

@@ -1,4 +1,4 @@
-package com.xzwb123.weibo.servlet;
+package com.xzwb123.weibo.page;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,8 +15,8 @@ import java.io.PrintWriter;
 public class RegisterSuccessPage extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
-        resp.setContentType("text/html;charset=utf-8");
+        // req.setCharacterEncoding("utf-8");
+        // resp.setContentType("text/html;charset=utf-8");
         PrintWriter out = resp.getWriter();
         String uid = (String)req.getAttribute("uid");
         out.println("<h1>注册成功!您的账号为<b>" + uid +"</b></h1><hr>");

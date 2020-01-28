@@ -15,8 +15,8 @@ import java.io.IOException;
 public class LogoutServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
-        resp.setContentType("text/html;charset=utf-8");
+        // req.setCharacterEncoding("utf-8");
+        // resp.setContentType("text/html;charset=utf-8");
         Cookie cookie = new Cookie("uid", "-1");
         resp.addCookie(cookie);
         resp.sendRedirect("/weibo/cookie");
