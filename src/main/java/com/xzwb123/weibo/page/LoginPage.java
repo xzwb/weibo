@@ -24,7 +24,8 @@ public class LoginPage extends HttpServlet {
         out.println("账号: <input type='text' name='name' placeholder='账号/邮箱/手机号' required><br><br>");
         out.println("密码: <input type='password' name='pwd' required>");
         out.println("<input type='submit' value='登录'>  <input type='checkbox' name='autoLogin' value='yes'> 三天内自动登录登陆");
-        out.println("</form>");
+        out.println("</form><br>");
+        out.println("<a href='http://localhost:8080/weibo/registerPage'>还没有账号?注册</a>");
         out.print("<hr>");
     }
 }
