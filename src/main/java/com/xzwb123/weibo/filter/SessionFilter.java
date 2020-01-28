@@ -14,7 +14,7 @@ import java.io.IOException;
 /**
  * 设置用户session失效后的处理
  */
-@WebFilter("*.needSession")
+@WebFilter("*.do")
 public class SessionFilter extends HttpFilter {
     @Override
     protected void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
