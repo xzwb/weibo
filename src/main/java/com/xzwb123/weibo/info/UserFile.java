@@ -1,8 +1,5 @@
 package com.xzwb123.weibo.info;
 
-import java.sql.Blob;
-import java.sql.Date;
-import java.sql.Time;
 import java.sql.Timestamp;
 
 public class UserFile {
@@ -11,6 +8,7 @@ public class UserFile {
     private String uname;
     private String txt;
     private Timestamp timestamp;
+    private String filename;
 
     public int getUid() {
         return uid;
@@ -52,13 +50,11 @@ public class UserFile {
         this.timestamp = timestamp;
     }
 
-    public Blob getBlob() {
-        return blob;
+    public String getFilename() {
+        return filename;
     }
 
-    public void setBlob(Blob blob) {
-        this.blob = blob;
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
-
-    private Blob blob;
 }
