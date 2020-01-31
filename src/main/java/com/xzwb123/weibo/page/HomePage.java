@@ -22,5 +22,6 @@ public class HomePage extends HttpServlet {
         User user = (User) hs.getAttribute("user");
         PrintWriter out = resp.getWriter();
         out.println("<h1>欢迎访问" + user.getUname() + "的主页</h1><hr>");
+        out.println("<a href='http://localhost:8080/weibo/logout'>注销</a><br>");
     }
 }
