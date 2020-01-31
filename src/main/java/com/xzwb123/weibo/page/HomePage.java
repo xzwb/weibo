@@ -24,11 +24,8 @@ public class HomePage extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession hs =  req.getSession();
         User user = (User) hs.getAttribute("user");
-        HashSet<UserFile> userFileHashSet = (HashSet<UserFile>) hs.getAttribute("HotUserFile");
-        if (userFileHashSet == null) {
-            HotUserFileService hotUserFileService = new HotUserFileServiceImpl();
-            userFileHashSet = hotUserFileService.getHotUserFile();
-        }
+        HotUserFileService hotUserFileService = new HotUserFileServiceImpl();
+        HashSet<UserFile> userFileHashSet = hotUserFileService.getHotUserFile();
         PrintWriter out = resp.getWriter();
         out.println("<h1>欢迎访问" + user.getUname() + "的主页</h1><hr>");
         out.println("<a href='http://localhost:8080/weibo/logout'>注销</a><br><hr>");
@@ -43,7 +40,6 @@ public class HomePage extends HttpServlet {
                 }
                 out.println("<br><hr><br>");
             }
-            hs.setAttribute("HotUserFile", userFileHashSet);
         }
 
     }

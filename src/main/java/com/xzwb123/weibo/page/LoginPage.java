@@ -50,8 +50,6 @@ public class LoginPage extends HttpServlet {
                 }
                 out.println("<br><hr><br>");
             }
-            HttpSession hs = req.getSession();
-            hs.setAttribute("HotUserFile", hotUserFile);
         }
     }
 }
