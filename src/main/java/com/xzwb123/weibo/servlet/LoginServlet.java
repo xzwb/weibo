@@ -17,6 +17,6 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        String uname = req.getParameter("name");
     }
 }

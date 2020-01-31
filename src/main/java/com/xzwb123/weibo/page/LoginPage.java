@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashSet;
@@ -24,6 +25,10 @@ public class LoginPage extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
+        String judge = (String)req.getAttribute("judge");
+        if (judge != null) {
+            out.println("<h1>用户名或密码错误</h1>");
+        }
         out.println("<img src='1.jpg' width=200px>");
         out.println("<form action='login' method='post'>");
         out.println("账号: <input type='text' name='name' placeholder='账号/邮箱/手机号' required><br><br>");
@@ -45,6 +50,8 @@ public class LoginPage extends HttpServlet {
                 }
                 out.println("<br><hr><br>");
             }
+            HttpSession hs = req.getSession();
+            hs.setAttribute("HotUserFile", hotUserFile);
         }
     }
 }
