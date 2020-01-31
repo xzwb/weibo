@@ -1,5 +1,9 @@
 package com.xzwb123.weibo.page;
 
+import com.xzwb123.weibo.info.UserFile;
+import com.xzwb123.weibo.service.HotUserFileService;
+import com.xzwb123.weibo.service.impl.HotUserFileServiceImpl;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -7,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashSet;
 
 /**
  * 登录界面
@@ -27,5 +32,19 @@ public class LoginPage extends HttpServlet {
         out.println("</form><br>");
         out.println("<a href='http://localhost:8080/weibo/registerPage'>还没有账号?注册</a>");
         out.print("<hr>");
+        out.println("<h3>最新动态</h3>");
+        HotUserFileService hotUserFileService = new HotUserFileServiceImpl();
+        HashSet<UserFile> hotUserFile = hotUserFileService.getHotUserFile();
+        if (hotUserFile != null) {
+            for (UserFile userFile : hotUserFile) {
+                out.println("<b>发布时间: </b>" + userFile.getTimestamp() + "<br>");
+                out.println("<b>用户昵称: </b>" + userFile.getUname() + "<br>");
+                out.println("<p>" + userFile.getTxt() + "</p><br>");
+                if (!("".equals(userFile.getFilename()))) {
+                    out.println("<img src='" + userFile.getFilename() + "' width='200px'>");
+                }
+                out.println("<br><hr><br>");
+            }
+        }
     }
 }
