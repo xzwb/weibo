@@ -15,10 +15,16 @@ public class RegisterDaoImpl implements RegisterDao {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/weibo2_0?characterEncoding=utf8", "root", "520520cw...");
-            String sql = "select *from t_user where email = ? and phoneNumber = ?";
+            String sql = "select *from t_user where email = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1, email);
-            ps.setString(2, phoneNumber);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return null;
+            }
+            String sql3 = "select *from t_user where phoneNumber = ?";
+            ps = conn.prepareStatement(sql3);
+            ps.setString(1, phoneNumber);
             rs = ps.executeQuery();
             while (rs.next()) {
                 return null;
