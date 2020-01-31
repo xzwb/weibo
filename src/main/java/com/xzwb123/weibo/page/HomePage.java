@@ -2,9 +2,11 @@ package com.xzwb123.weibo.page;
 
 import com.xzwb123.weibo.info.User;
 import com.xzwb123.weibo.info.UserFile;
+import com.xzwb123.weibo.listen.OnlineNumber;
 import com.xzwb123.weibo.service.HotUserFileService;
 import com.xzwb123.weibo.service.impl.HotUserFileServiceImpl;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,8 +28,10 @@ public class HomePage extends HttpServlet {
         User user = (User) hs.getAttribute("user");
         HotUserFileService hotUserFileService = new HotUserFileServiceImpl();
         HashSet<UserFile> userFileHashSet = hotUserFileService.getHotUserFile();
+        ServletContext sc = req.getServletContext();
+        int online = (int)sc.getAttribute("online");
         PrintWriter out = resp.getWriter();
-        out.println("<h1>欢迎访问" + user.getUname() + "的主页</h1><hr>");
+        out.println("<h1>欢迎访问" + user.getUname() + "的主页</h1> 当前在线人数: " + online + "<hr>");
         out.println("<a href='http://localhost:8080/weibo/logout'>注销</a><br><hr>");
         out.println("<h3>最新动态</h3>");
         if (userFileHashSet != null) {
