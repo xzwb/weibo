@@ -35,7 +35,10 @@ public class SendFilePage extends HttpServlet {
         } else {
             out.println("<textarea rows='20' cols='100' name = 'txt' required>" + userFile.getTxt() + "</textarea><br>");
         }
-        out.println("<input type='file' accept=\"image/png, image/jpeg, image/gif, image/jpg\" name='img'>");
+        out.println("<input type='file' accept=\"image/png, image/jpeg, image/gif, image/jpg\" name='img'><br><br>");
+        out.println("<input type='hidden' name='uname' value=' " + user.getUname() + "'>");
+        out.println("<input type='hidden' name='uid' value=' " + user.getUid() + "'>");
+        out.println("<input type='submit' name='post' value='发表'>    <input type='submit' name='save' value='保存'>");
         out.println("</form>");
     }
 }
