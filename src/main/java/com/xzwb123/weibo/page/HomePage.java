@@ -33,6 +33,7 @@ public class HomePage extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("<h1>欢迎访问" + user.getUname() + "的主页</h1> <a href = 'http://localhost:8080/weibo/onlineUser.do'>当前在线人数: " + online + "</a><hr>");
         out.println("<a href='http://localhost:8080/weibo/logout'>注销</a><br><hr>");
+        out.println("<a href='http://localhost:8080/weibo/sendFile.do'><h3>发表动态</h3></a>");
         out.println("<h3>最新动态</h3>");
         if (userFileHashSet != null) {
             for (UserFile userFile : userFileHashSet) {
