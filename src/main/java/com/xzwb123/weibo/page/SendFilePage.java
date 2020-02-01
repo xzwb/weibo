@@ -28,7 +28,7 @@ public class SendFilePage extends HttpServlet {
         PrintWriter out = resp.getWriter();
         DraftService ds = new DraftServiceImpl();
         UserFile userFile = ds.getDraftService(uid);
-        out.println("<h1>抒发好心情,在还没想好名字微博发表动态......</h1><br><hr>");
+        out.println("<h1>抒发好心情,在还没想好名字微博发表动态......</h1><a href='http://localhost:8080/weibo/homePage.do'><-返回</a><br><hr>");
         out.println("<form action = 'sendFile' method = 'post' enctype='multipart/form-data'>");
         if (userFile == null) {
             out.println("<textarea rows='20' cols='100' name = 'txt'  placeholder='抒发好心情.....' required></textarea><br>");
@@ -36,8 +36,8 @@ public class SendFilePage extends HttpServlet {
             out.println("<textarea rows='20' cols='100' name = 'txt' required>" + userFile.getTxt() + "</textarea><br>");
         }
         out.println("<input type='file' accept=\"image/png, image/jpeg, image/gif, image/jpg\" name='img'><br><br>");
-        out.println("<input type='hidden' name='uname' value=' " + user.getUname() + "'>");
-        out.println("<input type='hidden' name='uid' value=' " + user.getUid() + "'>");
+        out.println("<input type='hidden' name='uname' value='" + user.getUname() + "'>");
+        out.println("<input type='hidden' name='uid' value='" + user.getUid() + "'>");
         out.println("<input type='submit' name='post' value='发表'>    <input type='submit' name='save' value='保存'>");
         out.println("</form>");
     }
