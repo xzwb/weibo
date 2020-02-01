@@ -31,7 +31,7 @@ public class HomePage extends HttpServlet {
         ServletContext sc = req.getServletContext();
         int online = (int)sc.getAttribute("online");
         PrintWriter out = resp.getWriter();
-        out.println("<h1>欢迎访问" + user.getUname() + "的主页</h1> 当前在线人数: " + online + "<hr>");
+        out.println("<h1>欢迎访问" + user.getUname() + "的主页</h1> <a href = 'http://localhost:8080/weibo/onlineUser.do'>当前在线人数: " + online + "</a><hr>");
         out.println("<a href='http://localhost:8080/weibo/logout'>注销</a><br><hr>");
         out.println("<h3>最新动态</h3>");
         if (userFileHashSet != null) {
