@@ -34,7 +34,7 @@ public class PostFileServlet extends HttpServlet {
         } else {
             userFile.setFilename(timeInMillis+"");
             try {
-                part.write(String.format("%s", userFile.getFilename()));
+                part.write(String.format("%s%s", req.getSession().getServletContext().getRealPath("/"), userFile.getFilename()));
             } catch (Exception e) {
                 e.printStackTrace();
             }
