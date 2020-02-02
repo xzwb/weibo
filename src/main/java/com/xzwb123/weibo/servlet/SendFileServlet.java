@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@MultipartConfig(location = "/home/xzwb/weibo/src/main/webapp")
+//@MultipartConfig(location = "/usr/share/tomcat/webapps/weibo")
 @WebServlet(
         name = "SendFileServlet",
         urlPatterns = {"/sendFile"}

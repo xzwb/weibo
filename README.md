@@ -10,3 +10,7 @@
   `email` varchar(50) NOT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=100004 DEFAULT CHARSET=utf8 |
+
+建立数据表
+``t_file``
+create table t_file(fid int(10) not null auto_increment, uid int(10), uname varchar(100), txt varchar(3000), saveTime timestamp not null default now(), url varchar(100), try int, PRIMARY KEY (fid));

@@ -4,6 +4,38 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+
+    <servlet-name>PostFileServlet</servlet-name>
+    <servlet-class>com.xzwb123.weibo.servlet.PostFileServlet</servlet-class>
+    <multipart-config>
+    </multipart-config>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PostFileServlet</servlet-name>
+    <url-pattern>/postFile</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SendFileServlet</servlet-name>
+    <servlet-class>com.xzwb123.weibo.servlet.SendFileServlet</servlet-class>
+    <multipart-config></multipart-config>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendFileServlet</servlet-name>
+    <url-pattern>/sendFile</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SaveFileServlet</servlet-name>
+    <servlet-class>com.xzwb123.weibo.servlet.SaveFileServlet</servlet-class>
+    <multipart-config></multipart-config>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SaveFileServlet</servlet-name>
+    <url-pattern>/saveFile</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>cookie</welcome-file>
   </welcome-file-list>

@@ -14,7 +14,7 @@ import javax.servlet.http.Part;
 import java.io.IOException;
 import java.util.Calendar;
 
-@MultipartConfig(location = "/home/xzwb/weibo/src/main/webapp")
+// @MultipartConfig(location = "/usr/share/tomcat/webapps/weibo")
 @WebServlet(
         name = "PostFileServlet",
         urlPatterns = {"/postFile"}
