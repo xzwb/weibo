@@ -1,7 +1,7 @@
 package com.xzwb123.weibo.dao.impl;
 
 import com.xzwb123.weibo.dao.CookieDao;
-import com.xzwb123.weibo.info.User;
+import com.xzwb123.weibo.pojo.User;
 
 import java.sql.*;
 

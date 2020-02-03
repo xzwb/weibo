@@ -1,6 +1,6 @@
 package com.xzwb123.weibo.servlet;
 
-import com.xzwb123.weibo.info.User;
+import com.xzwb123.weibo.pojo.User;
 import com.xzwb123.weibo.service.JudgeLoginService;
 import com.xzwb123.weibo.service.impl.JudgeLoginServiceImpl;
 

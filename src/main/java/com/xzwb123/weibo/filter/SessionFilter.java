@@ -1,6 +1,6 @@
 package com.xzwb123.weibo.filter;
 
-import com.xzwb123.weibo.info.User;
+import com.xzwb123.weibo.pojo.User;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

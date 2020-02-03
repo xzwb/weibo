@@ -2,7 +2,7 @@ package com.xzwb123.weibo.service.impl;
 
 import com.xzwb123.weibo.dao.JudgeLoginDao;
 import com.xzwb123.weibo.dao.impl.JudgeLoginDaoImpl;
-import com.xzwb123.weibo.info.User;
+import com.xzwb123.weibo.pojo.User;
 import com.xzwb123.weibo.service.JudgeLoginService;
 
 import java.util.regex.Matcher;

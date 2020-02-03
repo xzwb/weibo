@@ -2,10 +2,9 @@ package com.xzwb123.weibo.service.impl;
 
 import com.xzwb123.weibo.dao.RegisterDao;
 import com.xzwb123.weibo.dao.impl.RegisterDaoImpl;
-import com.xzwb123.weibo.info.User;
+import com.xzwb123.weibo.pojo.User;
 import com.xzwb123.weibo.service.RegisterService;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

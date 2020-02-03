@@ -1,6 +1,6 @@
 package com.xzwb123.weibo.page;
 
-import com.xzwb123.weibo.info.User;
+import com.xzwb123.weibo.pojo.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

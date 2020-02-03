@@ -1,8 +1,7 @@
 package com.xzwb123.weibo.page;
 
-import com.xzwb123.weibo.dao.DraftDao;
-import com.xzwb123.weibo.info.User;
-import com.xzwb123.weibo.info.UserFile;
+import com.xzwb123.weibo.pojo.User;
+import com.xzwb123.weibo.pojo.UserFile;
 import com.xzwb123.weibo.service.DraftService;
 import com.xzwb123.weibo.service.impl.DraftServiceImpl;
 

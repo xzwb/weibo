@@ -1,4 +1,4 @@
-package com.xzwb123.weibo.info;
+package com.xzwb123.weibo.pojo;
 
 /**
  * 用户实例类

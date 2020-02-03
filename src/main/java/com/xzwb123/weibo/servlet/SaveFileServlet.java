@@ -1,11 +1,9 @@
 package com.xzwb123.weibo.servlet;
 
-import com.xzwb123.weibo.info.UserFile;
 import com.xzwb123.weibo.service.SaveFileService;
 import com.xzwb123.weibo.service.impl.SaveFileServiceImpl;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

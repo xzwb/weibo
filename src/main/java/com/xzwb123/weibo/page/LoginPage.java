@@ -1,6 +1,6 @@
 package com.xzwb123.weibo.page;
 
-import com.xzwb123.weibo.info.UserFile;
+import com.xzwb123.weibo.pojo.UserFile;
 import com.xzwb123.weibo.service.HotUserFileService;
 import com.xzwb123.weibo.service.impl.HotUserFileServiceImpl;
 
@@ -9,7 +9,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashSet;

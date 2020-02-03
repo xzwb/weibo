@@ -1,7 +1,7 @@
 package com.xzwb123.weibo.dao.impl;
 
 import com.xzwb123.weibo.dao.PostFileDao;
-import com.xzwb123.weibo.info.UserFile;
+import com.xzwb123.weibo.pojo.UserFile;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

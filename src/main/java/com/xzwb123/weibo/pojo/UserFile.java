@@ -1,4 +1,4 @@
-package com.xzwb123.weibo.info;
+package com.xzwb123.weibo.pojo;
 
 import java.sql.Timestamp;
 
