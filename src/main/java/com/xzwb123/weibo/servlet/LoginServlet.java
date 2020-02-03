@@ -34,6 +34,9 @@ public class LoginServlet extends HttpServlet {
                 Cookie c = new Cookie("uid", user.getUid() + "");
                 c.setMaxAge(3*24*3600);
                 resp.addCookie(c);
+            } else {
+                Cookie c = new Cookie("uid", user.getUid() + "");
+                resp.addCookie(c);
             }
             resp.sendRedirect("/weibo/homePage.do");
         }
